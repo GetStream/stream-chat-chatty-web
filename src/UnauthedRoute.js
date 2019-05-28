@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect, Route } from "react-router-dom";
 
 const UnauthedRoute = ({ component: Component, loading, ...rest }) => {
-  const isAuthed = Boolean(sessionStorage.getItem("token"));
+  const isAuthed = Boolean(sessionStorage.getItem("tokenData"));
   return (
     <Route
       {...rest}

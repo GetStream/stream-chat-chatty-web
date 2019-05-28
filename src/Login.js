@@ -40,8 +40,8 @@ class Login extends Component {
       );
     }
 
-    sessionStorage.setItem("user", JSON.stringify(auth.data.user));
-    sessionStorage.setItem("token", auth.data.token);
+    sessionStorage.setItem("userData", JSON.stringify(auth.data.user));
+    sessionStorage.setItem("tokenData", auth.data.token);
 
     await this.setState({
       loading: false

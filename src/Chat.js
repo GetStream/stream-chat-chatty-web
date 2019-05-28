@@ -17,7 +17,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    const { id, name, image } = JSON.parse(sessionStorage.getItem("user"));
+    const { id, name, image } = JSON.parse(sessionStorage.getItem("userData"));
 
     this.client = new StreamChat(process.env.REACT_APP_STREAM_KEY);
 
@@ -27,7 +27,7 @@ class App extends Component {
         name,
         image
       },
-      sessionStorage.getItem("token")
+      sessionStorage.getItem("tokenData")
     );
 
     this.channel = this.client.channel(
