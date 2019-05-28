@@ -1,0 +1,26 @@
+import React from "react";
+import { Redirect, Route } from "react-router-dom";
+
+const UnauthedRoute = ({ component: Component, loading, ...rest }) => {
+  const isAuthed = Boolean(sessionStorage.getItem("token"));
+  return (
+    <Route
+      {...rest}
+      render={props =>
+        loading ? (
+          <p>Loading...</p>
+        ) : !isAuthed ? (
+          <Component history={props.history} {...rest} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/"
+            }}
+          />
+        )
+      }
+    />
+  );
+};
+
+export default UnauthedRoute;
