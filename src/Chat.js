@@ -35,7 +35,7 @@ class App extends Component {
       process.env.REACT_APP_CHANNEL_NAME,
       {
         image: "https://i.imgur.com/LmW57kB.png",
-        name: "Feeling Chatty with Kathy"
+        name: "Kathy is Feeling Chatty About Kanye"
       }
     );
   }
