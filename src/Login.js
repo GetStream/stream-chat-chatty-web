@@ -33,7 +33,7 @@ class Login extends Component {
 
     if (mobile()) {
       return window.open(
-        `sms:${process.env.REACT_APP_TWILIO_NUMBER}?body=Hi, ${
+        `sms:${process.env.REACT_APP_TWILIO_NUMBER}?body=Hi, @${
           auth.data.user.name
         } here! How is everyone doing?`,
         "_system"
